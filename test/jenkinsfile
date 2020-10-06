@@ -1,0 +1,8 @@
+pipeline {
+	agent{label 'main'}
+		stage('test'){
+			steps {
+				sh "mvn clean compile test";
+			}
+		}
+}
