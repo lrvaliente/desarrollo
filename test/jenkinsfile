@@ -1,8 +1,10 @@
 pipeline {
-	agent{label 'main'}
-		stages('test'){
-			steps {
-				sh "mvn clean compile test";
+	agent{ label 'main' }
+		stages{
+			stage('test'){
+				steps {
+					sh "mvn clean compile test";
+				}
 			}
 		}
 }
