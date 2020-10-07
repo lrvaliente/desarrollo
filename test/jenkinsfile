@@ -2,9 +2,20 @@ pipeline {
 	agent { label 'master' }
 		stages{
 			stage('test'){
-				def mvnHome = tool name: 'Apache Maven 3.3.9', type: 'maven'
 				steps {
-					sh "${mvnHome}/bin/mvn clean compile test";
+					sh "mvn clean compile test";
+				}
+			}
+			
+			stage ('Build application') {
+				steps {
+					echo "mvn clean install -Dmaven.test.skip-true"
+				}
+			}
+			
+			stage ('Other') {
+				steps {
+					echo "other..."
 				}
 			}
 		}
