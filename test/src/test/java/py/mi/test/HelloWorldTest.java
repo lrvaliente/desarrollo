@@ -16,7 +16,7 @@ class HelloWorldTest {
 		
 		try {
 			boolean resul = h.verificar(VARLOR);
-			
+			System.out.println("EJECUTANDO TEST...");
 			assertEquals(true, resul);
 		} catch(Exception e) {
 			e.printStackTrace();
