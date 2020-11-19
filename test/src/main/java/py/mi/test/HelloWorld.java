@@ -7,7 +7,7 @@ public class HelloWorld {
 		if(cadena.equalsIgnoreCase("index")) {
 			return true;
 		} else {
-			throw new Exception();
+			return false;
 		}
 	}
 }
