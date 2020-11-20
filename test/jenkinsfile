@@ -3,18 +3,18 @@ pipeline {
 		stages{
 			stage('Iniciar'){
 				steps {
-					sh "mvn --version";
+					sh "/opt/maven/bin/mvn --version";
 				}
 			}
 			stage('test'){
 				steps {
-					sh "mvn clean compile test";
+					sh "/opt/maven/bin/mvn clean compile test";
 				}
 			}
 			
 			stage ('Build application') {
 				steps {
-					echo "mvn clean install -Dmaven.test.skip-true"
+					echo "/opt/maven/bin/mvn clean install -Dmaven.test.skip-true"
 				}
 			}
 			
