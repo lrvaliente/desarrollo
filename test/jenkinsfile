@@ -8,7 +8,9 @@ pipeline {
 			}
 			stage('test'){
 				steps {
-					sh "/opt/maven/bin/mvn clean compile test";
+					dir("test"){
+						sh "/opt/maven/bin/mvn clean compile test";
+					}					
 				}
 			}
 			
