@@ -1,6 +1,11 @@
 pipeline {
 	agent { label 'master' }
 		stages{
+			stage('Iniciar'){
+				steps {
+					sh "mvn --version";
+				}
+			}
 			stage('test'){
 				steps {
 					sh "mvn clean compile test";
