@@ -2,27 +2,34 @@ package py.mi.test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 @DisplayName("Test form HelloWorldTest")
 class HelloWorldTest {
 
-	private static final String VARLOR = "HOME";
-	
+	private static final String VALOR = "HOME";
+
+	@BeforeAll
+	static void setup() {
+
+	}
+
+	@AfterAll
+	static void tearDown() {
+
+	}
+
 	@Test
-	public void test() {
+	@DisplayName("Test basico")
+	void test() {
 		HelloWorld h = new HelloWorld();
-		
-		try {
-			boolean resul = h.verificar(VARLOR);
-			System.out.println("EJECUTANDO TEST...");
-			assertEquals(true, true);
-			assertEquals(true, resul);
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
-		
+
+		String resul = h.verificar();
+		assertEquals(VALOR, resul);
+
 	}
 
 }
