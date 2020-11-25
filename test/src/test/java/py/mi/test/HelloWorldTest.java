@@ -1,30 +1,20 @@
 package py.mi.test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 @DisplayName("Test form HelloWorldTest")
-class HelloWorldTest {
+public class HelloWorldTest {
 
-	private static final String VALOR = "HOME";
+	private static final String VALOR = "Home";
 
-	@BeforeAll
-	static void setup() {
-
-	}
-
-	@AfterAll
-	static void tearDown() {
-
-	}
+	public HelloWorldTest() {}
 
 	@Test
 	@DisplayName("Test basico")
-	void test() {
+	public void test() {
 		HelloWorld h = new HelloWorld();
 
 		String resul = h.verificar();
